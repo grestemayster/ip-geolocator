@@ -1,5 +1,9 @@
 package geolocator;
 
+import com.fasterxml.jackson.databind.deser.std.StringArrayDeserializer;
+import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.apache.commons.lang3.builder.ToStringStyle;
+
 public class GeoLocation {
 
     private String as;
@@ -120,4 +124,8 @@ public class GeoLocation {
         this.zip = zip;
     }
 
+    @java.lang.Override
+    public java.lang.String toString() {
+        return ReflectionToStringBuilder.toString(this, ToStringStyle.MULTI_LINE_STYLE);
+    }
 }
